@@ -1,0 +1,14 @@
+				# Print "Its perimeter is "
+  addi 	$v0, $0, 4  			# system call 4 is for printing a string
+  la 	$a0, perimeterIs			# address of perimeterIs string is in $a0
+  syscall           			# print the string
+  
+  				# Print the calculated perimeter (in $12)
+  addi 	$v0, $0, 1  			# system call 1 is for printing an integer
+  add 	$a0, $0, $12			# bring the area value from $12 into $a0
+  syscall           			# print the integer
+  
+  				# Print a newline
+  addi 	$v0, $0, 4  			# system call 4 is for printing a string
+  la 	$a0, newline 			# address of perimeterIs string is in $a0
+  syscall           	
